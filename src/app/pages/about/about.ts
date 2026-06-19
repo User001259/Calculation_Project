@@ -10,4 +10,5 @@ export class About {
 
   data: number[] = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 
+  test123:string = "This is a test string for the About component.";
 }
