@@ -8,16 +8,35 @@ import { CommonModule } from '@angular/common';
   templateUrl: './multiplication.html',
   styleUrls: ['./multiplication.css'],
 })
-
-
 export class Multiplication {
   data: number[] = [];
-  text: string = 'hello world';
+  name: string = 'Multiplication Table';
 
-  constructor() {
-    const d = this.data;
+  data2: number[][] = [];
+  size: number = 11;
+
+  getInnerArray(j: number): number[] {
+    let tempArray: number[] = [];
+    for (let i = 1; i < this.size; i++) {
+      tempArray.push(i * j);
+    }
+    return tempArray;
+  }
+
+  d: any = this.data;
+
+  ngOnInit() {
     for (let i = 1; i < 11; i += 1) {
-      d.push(i)
+      this.d.push(i);
+    }
+
+    for (let i = 1; i < this.size; i++) {
+      this.data2.push(this.getInnerArray(i));
     }
   }
+
+  text: string = 'hello world';
+  text2: string = 'hello world';
+
+  constructor() {}
 }
