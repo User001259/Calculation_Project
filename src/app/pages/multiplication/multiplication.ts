@@ -15,6 +15,7 @@ export class Multiplication {
   d: number[] = this.data;
   name: string = 'Multiplication Table';
   generate_myl() {
+    this.d = [];
     for (let i = 1; i < this.size; i += 1) {
       this.d.push(i);
     }
