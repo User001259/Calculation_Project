@@ -5,12 +5,11 @@
 <div class="content">
   <article aria-label="article" >
     <ul aria-label="list">
-<!--      {{[1,2,3,4,5,6,7,8,9,10].join(', ')}}-->
+      <p>Table of multiplication:</p>
       @for (i of d; track $index) {
-<!--      <li *ngFor="let i of d;">-->
         <li>
           @for (item of d; track $index) {
-            {{i}} * {{item}} = {{i * item}}, <br>
+            {{item * i}}<br>
           }
         </li>
       }
