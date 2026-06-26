@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 
 export class Multiplication {
   data: number[] = [];
+  text: string = 'hello world';
 
   constructor() {
     const d = this.data;
