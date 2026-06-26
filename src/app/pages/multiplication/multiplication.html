@@ -16,7 +16,13 @@
     </ul>
   </article>
 
-<input type="text" aria-label="input" placeholder="input" #input>
+  <div class="buttons">
+    <input type="text" aria-label="input" placeholder="input" #input>
+    <button aria-label="add" (click)="add(1)">+</button>
+    <button aria-label="sub" (click)="add(-1)">-</button>
+    {{size}}
+  </div>
+
 
 
 <div>
