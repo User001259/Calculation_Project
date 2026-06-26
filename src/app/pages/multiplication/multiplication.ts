@@ -12,10 +12,11 @@ import { CommonModule } from '@angular/common';
 
 export class Multiplication {
   data: number[] = [];
+
   constructor() {
     const d = this.data;
-    for (let i = 0; i < 10; i += 1) {
-      d.push(Math.floor(Math.random() * 100));
+    for (let i = 1; i < 11; i += 1) {
+      d.push(i)
     }
   }
 }
