@@ -1,11 +1,21 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-multiplication',
-  imports: [],
+  imports: [CommonModule],
+  standalone: true,
   templateUrl: './multiplication.html',
-  styleUrl: './multiplication.css',
+  styleUrls: ['./multiplication.css'],
 })
+
+
 export class Multiplication {
-  data: any[] = ["10", 20, 30, 40, 50, 60, 70, 80, 90, 100];
+  data: number[] = [];
+  constructor() {
+    const d = this.data;
+    for (let i = 0; i < 10; i += 1) {
+      d.push(Math.floor(Math.random() * 100));
+    }
+  }
 }

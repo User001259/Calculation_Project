@@ -1,13 +1,27 @@
 <p>multiplication works!</p>
-<!-- <ul >
-    @for (i of numbers; track i) {
-        <li>index: {{ i }}</li>
-    }
-</ul> -->
-<ul>
-  @for (item of data; track $index) {
-    <li>
-      index: {{ $index }} → value: {{ item }}
-    </li>
-  }
+
+
+
+<div class="content">
+  <ul aria-label="list">
+    <li *ngFor="let item of data; let i = index ">
+      {{ item }}
+      <!-- @if (i < data.length - 1) {
+      } -->
+    </li>|
 </ul>
+
+<input type="text" aria-label="input" placeholder="input" #input>
+
+
+<div>
+  <label for="select operation" aria-label="select operation" aria-labelledby="select operation">select operation </label>
+
+   <select name="select operation" id="select operation" aria-labelledby="select operation" aria-controls="price-display">
+      <option value="add">add</option>
+      <option value="sub">sub</option>
+      <option value="mul">mul</option>
+      <option value="div">div</option>
+    </select>
+  </div>
+</div>

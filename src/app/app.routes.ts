@@ -14,7 +14,7 @@ export const routes: Routes = [
   {
     path: 'about', component: About
   },
-   { 
+   {
     path: 'multiplication', component: Multiplication
   }
 ];
