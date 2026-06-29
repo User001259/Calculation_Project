@@ -22,6 +22,9 @@
     <button [disabled]= "size < 1"  aria-label="sub" (click)="add(-1)">-</button>
     <button aria-label="reset" (click)="resetValue()">Reset</button>
     {{size}}
+    @if (size < 1) {
+      <span> Puste znaczenia </span>
+    }
   </div>
 
 

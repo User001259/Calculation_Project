@@ -1,0 +1,13 @@
+
+<div class="content">
+    <form [formGroup]="loginForm" method="post" (ngSubmit)="onSubmit()">
+      <input type="email" formControlName="username">
+      <input type="password" formControlName="password">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      @if (loginForm.get('username')?.invalid ) {
+        <div class="error">Username is not required!</div>
+      }
+      <button type="submit">Submit</button>
+    </form>
+</div>
