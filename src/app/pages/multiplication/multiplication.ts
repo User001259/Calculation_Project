@@ -14,16 +14,25 @@ export class Multiplication {
   data: number[] = [];
   d: number[] = this.data;
   name: string = 'Multiplication Table';
+
+  ngOnInit() {
+    this.generate_myl();
+  }
   generate_myl() {
     for (let i = 1; i < this.size; i += 1) {
       this.d.push(i);
+
     }
   }
   add(n: number) {
     this.size += n;
     this.generate_myl();
-    console.log(this.size)
   }
+  resetValue() {
+    this.size = 0;
+    this.generate_myl();
+  }
+
   // data2: number[][] = [];
   // size: number = 11;
 
@@ -35,9 +44,6 @@ export class Multiplication {
   //   return tempArray;
   // }
 
-  ngOnInit() {
-    this.generate_myl();
-  }
 
   constructor() {}
 }

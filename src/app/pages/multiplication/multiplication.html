@@ -4,8 +4,8 @@
 
 <div class="content">
   <article aria-label="article" >
+    <p>Table of multiplication:</p>
     <ul aria-label="list">
-      <p>Table of multiplication:</p>
       @for (i of d; track $index) {
         <li>
           @for (item of d; track $index) {
@@ -17,9 +17,10 @@
   </article>
 
   <div class="buttons">
-    <input type="text" aria-label="input" placeholder="input" #input>
+    <input type="text" aria-label="input" placeholder="input"/>
     <button aria-label="add" (click)="add(1)">+</button>
-    <button aria-label="sub" (click)="add(-1)">-</button>
+    <button [disabled]= "size < 1"  aria-label="sub" (click)="add(-1)">-</button>
+    <button aria-label="reset" (click)="resetValue()">Reset</button>
     {{size}}
   </div>
 
