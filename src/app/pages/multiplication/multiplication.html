@@ -1,0 +1,39 @@
+<p>multiplication works!</p>
+
+
+
+<div class="content">
+  <article aria-label="article" >
+    <p>Table of multiplication:</p>
+    <ul aria-label="list">
+      @for (i of d; track $index) {
+        <li>
+          @for (item of d; track $index) {
+            {{item * i}}<br>
+          }
+        </li>
+      }
+    </ul>
+  </article>
+
+  <div class="buttons">
+    <input type="text" aria-label="input" placeholder="input"/>
+    <button aria-label="add" (click)="add(1)">+</button>
+    <button [disabled]= "size < 1"  aria-label="sub" (click)="add(-1)">-</button>
+    <button aria-label="reset" (click)="resetValue()">Reset</button>
+    {{size}}
+  </div>
+
+
+
+<div>
+  <label for="select operation" aria-label="select operation" aria-labelledby="select operation">select operation </label>
+
+   <select name="select operation" id="select operation" aria-labelledby="select operation" aria-controls="price-display">
+      <option value="add">add</option>
+      <option value="sub">sub</option>
+      <option value="mul">mul</option>
+      <option value="div">div</option>
+    </select>
+  </div>
+</div>
